@@ -1,38 +1,34 @@
 //
-//  AddEmailView.swift
+//  CompleteSignUpView.swift
 //  InstagramClone
 //
-//  Created by Tamim Khan on 3/6/23.
+//  Created by Tamim Khan on 4/6/23.
 //
 
 import SwiftUI
 
-struct AddEmailView: View {
-    @State private var email = ""
-    
+struct CompleteSignUpView: View {
+    @EnvironmentObject var viewModel: RegistrationViewModel
     var body: some View {
         VStack(spacing: 12){
-            Text("Add Your Email")
+            Spacer()
+            Text("Welcome To Instagram, \(viewModel.username)")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top)
+                .multilineTextAlignment(.center)
             
-            Text("You'll use this email to sign up")
+            Text("Click below to complete registration and using instagrtam")
                 .font(.footnote)
-                .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
-            TextField("Enter your Email", text: $email)
-                .autocapitalization(.none)
-                .modifier(IGTextFieldModifiers())
             
             
-            NavigationLink {
-                CreatUserNameView()
-                    .navigationBarBackButtonHidden(true)
+           Button {
+               Task{ try await viewModel.creatUser()}
             } label: {
-                Text("Next")
+                Text("Complete Sign Up")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
@@ -43,14 +39,14 @@ struct AddEmailView: View {
             .padding(.vertical)
             
             Spacer()
+            
+                .modifier(BackButtonView())
         }
-        
-        .modifier(BackButtonView())
     }
 }
 
-struct AddEmailView_Previews: PreviewProvider {
+struct CompleteSignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        AddEmailView()
+        CompleteSignUpView()
     }
 }

@@ -1,35 +1,37 @@
 //
-//  CreatUserNameView.swift
+//  AddEmailView.swift
 //  InstagramClone
 //
-//  Created by Tamim Khan on 4/6/23.
+//  Created by Tamim Khan on 3/6/23.
 //
 
 import SwiftUI
 
-struct CreatUserNameView: View {
-    @State private var username = ""
+struct AddEmailView: View {
+   
+    
+    @EnvironmentObject var viewModel: RegistrationViewModel
     
     var body: some View {
         VStack(spacing: 12){
-            Text("Creat User name")
+            Text("Add Your Email")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top)
             
-            Text("You'll use this user name to sign up")
+            Text("You'll use this email to sign up")
                 .font(.footnote)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
-            TextField("Enter your user name", text: $username)
+            TextField("Enter your Email", text: $viewModel.email)
                 .autocapitalization(.none)
                 .modifier(IGTextFieldModifiers())
             
             
             NavigationLink {
-               CreatPasswordView()
+                CreatUserNameView()
                     .navigationBarBackButtonHidden(true)
             } label: {
                 Text("Next")
@@ -43,14 +45,14 @@ struct CreatUserNameView: View {
             .padding(.vertical)
             
             Spacer()
-            
-                .modifier(BackButtonView())
         }
+        
+        .modifier(BackButtonView())
     }
 }
 
-struct CreatUserNameView_Previews: PreviewProvider {
+struct AddEmailView_Previews: PreviewProvider {
     static var previews: some View {
-        CreatUserNameView()
+        AddEmailView()
     }
 }
