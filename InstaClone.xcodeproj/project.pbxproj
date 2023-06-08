@@ -14,6 +14,7 @@
 		3F128BB92A30908200AE48AD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F128BB82A30908200AE48AD /* AuthService.swift */; };
 		3F128BBE2A3093F800AE48AD /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F128BBD2A3093F800AE48AD /* ContentViewModel.swift */; };
 		3F128BC12A30ABA200AE48AD /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F128BC02A30ABA200AE48AD /* RegistrationViewModel.swift */; };
+		3F128BC32A31FB9300AE48AD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F128BC22A31FB9300AE48AD /* LoginViewModel.swift */; };
 		3F87E1682A2F7DF5006CCC02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F87E1672A2F7DF5006CCC02 /* GoogleService-Info.plist */; };
 		3FBAB3D72A2F798C00599797 /* InstaCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAB3D62A2F798C00599797 /* InstaCloneApp.swift */; };
 		3FBAB3D92A2F798C00599797 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAB3D82A2F798C00599797 /* ContentView.swift */; };
@@ -45,6 +46,7 @@
 		3F128BB82A30908200AE48AD /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3F128BBD2A3093F800AE48AD /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		3F128BC02A30ABA200AE48AD /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		3F128BC22A31FB9300AE48AD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3F87E1672A2F7DF5006CCC02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3FBAB3D32A2F798C00599797 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBAB3D62A2F798C00599797 /* InstaCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneApp.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				3F128BC02A30ABA200AE48AD /* RegistrationViewModel.swift */,
+				3F128BC22A31FB9300AE48AD /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				3FBAB3D92A2F798C00599797 /* ContentView.swift in Sources */,
 				3FBAB4082A2F79A100599797 /* ProfileHeaderView.swift in Sources */,
 				3FBAB4112A2F79A100599797 /* AddEmailView.swift in Sources */,
+				3F128BC32A31FB9300AE48AD /* LoginViewModel.swift in Sources */,
 				3F128BBE2A3093F800AE48AD /* ContentViewModel.swift in Sources */,
 				3FBAB4072A2F79A100599797 /* ProfileView.swift in Sources */,
 				3FBAB4092A2F79A100599797 /* FeedView.swift in Sources */,
