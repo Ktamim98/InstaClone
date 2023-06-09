@@ -19,6 +19,7 @@ class ContentViewModel: ObservableObject{
     
     
     @Published var userSession: FirebaseAuth.User?
+    @Published var currentUser: User?
     
     init(){
         setupSubscriber()
@@ -27,6 +28,11 @@ class ContentViewModel: ObservableObject{
     func setupSubscriber(){
         service.$userSession.sink { [weak self] userSession in
             self?.userSession = userSession
+        }
+        .store(in: &cancellbles)
+        
+        service.$currentUser.sink { [weak self] currentUser in
+            self?.currentUser = currentUser
         }
         .store(in: &cancellbles)
     }
