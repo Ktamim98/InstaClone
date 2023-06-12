@@ -16,12 +16,7 @@ struct ProfileHeaderView: View {
     var body: some View {
         VStack(spacing: 12){
             HStack{
-                
-                Image(user.profileImageUrl ?? "")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 80, height: 80)
-                    .clipShape(Circle())
+                CircularProfileImageView(user: user, size: .large)
                 
                 Spacer()
                 
@@ -73,7 +68,7 @@ struct ProfileHeaderView: View {
             Divider()
         }
         .fullScreenCover(isPresented: $showEditProfile) {
-            Text("edit profile")
+           EditProfileView(user: user)
         }
     }
 }
