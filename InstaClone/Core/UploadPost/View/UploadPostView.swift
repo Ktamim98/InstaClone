@@ -33,8 +33,13 @@ struct UploadPostView: View {
                 Spacer()
                 
                 Button {
-                    Task{ try await viewModel.uploadPost(caption: caption)}
-                    backtoView()
+                    Task{
+                        try await viewModel.uploadPost(caption: caption)
+                        DispatchQueue.main.async {
+                                    backtoView()
+                                }
+                    }
+                    
                 } label: {
                     Text("Upload")
                 }
