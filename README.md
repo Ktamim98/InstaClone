@@ -1,6 +1,10 @@
 # InstaClone
 The app is built using SwiftUI and is designed to mimic the core functionalities of the popular social media platform, Instagram.
 
+
+https://github.com/Ktamim98/InstaClone/assets/124142522/bb997ae7-8a4c-4bd8-a819-b39c653fad04
+
+
 ## Features
 - User authentication: Users can sign up, log in, and log out of the app.
 - User profiles: Users have their own profiles where they can upload profile pictures, update their bio, and view their posts.
